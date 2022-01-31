@@ -1,13 +1,21 @@
 
 
 <div class="text-layout">
-
   <h1>{{ nombre | titlecase }}</h1>
   <h1>{{ valor | number }}</h1>
   <h1>{{ obj | json }}</h1>
-
 </div>
 
 <button pButton
         (click)="mostrarNombre()"
+        icon="pi pi-check"
+        iconPos="right"
+        class="p-button-help"
         label="Cambiar nombre"></button>
+
+<br>
+
+<p-card [header]="nombre | titlecase"
+        subheader="Esto es un subheader">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid? Ut exercitationem dignissimos magni itaque eos. Perspiciatis, laboriosam dolore aliquid, laudantium numquam veritatis quas voluptatem voluptate quia quam dolorem consectetur?
+</p-card>
